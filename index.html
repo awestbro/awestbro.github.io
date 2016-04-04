@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="1000px;" height="500px"></canvas>
+    <script>
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      var oneText = getParameterByName('one') || 'Charts Will hates';
+      var twoText = getParameterByName('two') || 'Venn Diagrams';
+
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      var oneX = canvas.width / 4;
+      var oneY = canvas.height / 2;
+
+      var twoX = oneX * 3;
+      var twoY = oneY;
+
+      var radius = 150;
+
+      // left circle
+      context.beginPath();
+      context.arc(oneX, oneY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.fillStyle = 'black';
+      context.font = 'bold 24px arial';
+      context.textAlign = 'center';
+      context.fillText(oneText, oneX, oneY);
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+
+      // right circle
+      context.beginPath();
+      context.arc(twoX, twoY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'blue';
+      context.fill();
+      context.fillStyle = 'black';
+      context.font = 'bold 24px arial';
+      context.textAlign = 'center';
+      context.fillText(twoText, twoX, twoY);
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+    </script>
+  </body>
+</html>
