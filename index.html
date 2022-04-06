@@ -50,7 +50,7 @@
             ProductDiv is a web page editor that works anywhere! It accomplishes
             this by being an HTML and CSS first editor, running entirely client
             side and based on configuration. It was born out of a frustration
-            with other visual editing tools either for a lack of
+            with other visual editing tools either for their of
             configurability, extensibility, or means of distribution. The core
             of ProductDiv is an open source library found
             <a href="https://github.com/awestbro/productdiv">here</a>. This
@@ -68,8 +68,7 @@
           <p>
             ProductDiv, the library, works by rendering your templates in the page
             itself. This way as your project grows, evolves, and changes so do
-            your templates. Since ProductDiv is configuration based, it is
-            intended to live beside your project as a tool for all the
+            your templates. Since ProductDiv is configuration based, it lives beside your project as a tool for all the
             developers on your team! Have a common component? Make a template
             defintion and your team never has to write that code again!
           </p>
@@ -78,7 +77,7 @@
             Start using ProductDiv by clicking the purple "PD" button in the
             bottom left hand of your browser. This opens ProductDiv by wrapping
             the current page in an <code>iframe</code> element so it can render
-            the ProductDiv editor. Now you should see ProductDiv on the left
+            the editor. Now you should see ProductDiv on the left
             hand side of the screen ready for use! If you see elements being
             highlighted while you mouse over them don't panic! We'll get to that
             in just a moment...
@@ -86,7 +85,7 @@
           <h3 class="text-muted mt-5">Using the Template Selector</h3>
           <div class="productdiv-drop-container"></div>
           <p>
-            Now that you've opened ProductDiv, there should be a green box above this paragraph. Try dragging an alert template into it to see how page editing works! Many of the templates tagged with "Layout" contain these drop containers and can be used as scaffolding for your application!
+            Now that you've opened ProductDiv, there should be a green box above this paragraph. Try dragging an alert template into it to see how page editing works! Many of the templates tagged with "Layout" contain these drop containers and are used as scaffolding for your application!
           </p>
           <p>
             The Template selector should now be visible with all of your
@@ -144,7 +143,7 @@
           </p>
           <p>
             Much of the functionality of the Element Editor is in the actions.
-            Under the HTML editor, you will see all of the actions available. An
+            Under the HTML editor, you will see the available actions. An
             important one is Select Parent. This selects the immediate parent
             for this element and is useful for quickly navigating to elements
             that may be hard to click exactly. If you need to get to a hard to
@@ -164,8 +163,7 @@
             <h4 class="alert-heading">Usage with client side frameworks</h4>
             <p>
               If you use a client-side rendering framework like React or Vue,
-              your page changes will be lost when you turn off ProductDiv as the
-              page performs a full document re-render. Please copy any changes
+              your page changes will be lost when you turn off ProductDiv. The toggle triggers a full document re-render. Please copy any changes
               you would like to keep to you code before toggling this off.
             </p>
             <hr />
@@ -183,26 +181,19 @@
             On the right-hand side of the menu you'll find actions. From here
             you can copy the entire page's HTML, you can open documentation, and
             you can toggle the Tree View. This will open a seperate menu on the
-            right hand side of the screen to help you easily navigate the nested
+            right hand side of the screen to help you navigate the nested
             structure of the DOM. Clicking an element in the TreeView will open
-            it in the Element Editor. If you don't want certain nodes showing up
-            here (useful for hiding script tags, svgs, etc) you can add a
-            querySelector for it in your ProductDiv's configuration key for
-            <code>treeViewIgnoreQuerySelectors</code>
+            it in the Element Editor.
           </p>
 
           <h2 class="text-muted mt-5">Making ProductDiv your own</h2>
           <p>
-            ProductDiv is a foundation for your project that grows with you. All
-            of it is entirely configurable so if you're adding new styles or
-            components to your application, modify your ProductDiv configuration
-            and you'll be set to develop with speed! Definitions for
-            configuration are located in the ProductDiv main repository at:
+            ProductDiv is a foundation for your project that grows with you. It is configurable so you can add new templates and utility classes as needed! The configuration schema is here: 
             <a
               href="https://github.com/awestbro/productdiv/blob/main/app/utilities/configuration/configuration-importer.ts"
               >https://github.com/awestbro/productdiv/blob/main/app/utilities/configuration/configuration-importer.ts</a
             >.
-            An example configuration could be defined as:
+            The most basic configuration would look like:
 <pre>
     <code>
 const configuration = {
