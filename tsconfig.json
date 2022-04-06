@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
-    "outDir": "./docs",
-    "noImplicitAny": true,
-    "module": "CommonJS",
-    "target": "es5",
-    "allowJs": true,
-    "typeRoots": ["@types"],
-    "lib": ["es6", "dom", "es2017"],
-    "jsx": "react",
-    "baseUrl": "./",
-    "paths": {
-      "*": ["ts/@types/*"]
-    }
-  }
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true
+  },
+  "include": ["src"]
 }
