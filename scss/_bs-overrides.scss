@@ -1,0 +1,32 @@
+// COLORS
+$primary: rgb(66, 115, 198) !default;
+$secondary: rgb(80, 84, 91) !default;
+$dark: #303841 !default;
+$info: #72e2f9 !default;
+$body-color: #484848;
+// $body-bg: white;
+
+// FONTS
+$font-size-base: 1.2rem !default;
+
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@800&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.btn {
+  font-family: "Almarai";
+  font-weight: bold;
+}
+/*
+I like:
+    Almarai 800
+*/
+
+// $font-family-sans-serif: 'Righteous', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+// @import url('https://fonts.googleapis.com/css2?family=Rampart+One:wght@200;400;700;900&display=swap');
+// $font-family-sans-serif: 'Rampart One', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;

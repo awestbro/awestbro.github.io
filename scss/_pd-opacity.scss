@@ -1,0 +1,18 @@
+$pd-opacities: (
+    "25": 0.25,
+    "50": 0.5,
+    "75": 0.75,
+    "85": 0.85,
+) !default;
+    
+@mixin bg-opacity($bg-color, $opacity: 0.75) {
+    box-shadow: inset 0 0 0 2000px rgba($bg-color, $opacity);
+}
+
+@each $color, $value in $theme-colors {
+    @each $opacity-name, $opacity in $pd-opacities {
+        .pd-bg-#{$color}-opacity-#{$opacity-name} {
+          @include bg-opacity($value, $opacity);
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@mixin bg-gradient($bg-color, $deg: 30deg) {
+    background: $bg-color;
+    background: linear-gradient(30deg, darken($bg-color, 10%) 0%, $bg-color 50%, lighten($bg-color, 10%) 100%);
+}
+
+@mixin text-gradient($color, $to-color: lighten($color, 10%), $deg: 30deg) {
+    background: -webkit-linear-gradient($deg, $color, $to-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin btn-gradient($color, $deg: 30deg) {
+    @include button-variant($color, $color);
+    background-image: linear-gradient($deg, darken($color, 10%) 0%, $color 50%, lighten($color, 10%) 100%);
+
+    &:hover {
+        background-image: none;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .pd-text-gradient-#{$color} {
+      @include text-gradient($value, $value);
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .pd-bg-gradient-#{$color} {
+      @include bg-gradient($value, $value);
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .pd-btn-gradient-#{$color} {
+      @include btn-gradient($value);
+    }
+}
