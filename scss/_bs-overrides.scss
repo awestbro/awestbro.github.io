@@ -4,7 +4,14 @@ $secondary: rgb(80, 84, 91) !default;
 $dark: #303841 !default;
 $info: #72e2f9 !default;
 $body-color: #484848;
-// $body-bg: white;
+
+$container-max-widths: (
+  sm: 520px,
+  md: 700px,
+  lg: 940px,
+  xl: 1140px,
+  xxl: 1150px,
+);
 
 // FONTS
 $font-size-base: 1.2rem !default;
