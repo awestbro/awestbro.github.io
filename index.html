@@ -15,13 +15,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0JH5KH8EC"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z0JH5KH8EC"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-Z0JH5KH8EC');
+      gtag("config", "G-Z0JH5KH8EC");
     </script>
   </head>
 
@@ -42,250 +47,9 @@
       <section>
         <div class="container">
           <div class="d-flex flex-column align-items-center">
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/munrSX5i4-o?autoplay=1&amp;loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="max-width: 700px; max-height: 400px;"></iframe>
-            <div class="h5 mt-5 text-muted">Click the <span class="text-primary">PD</span> button in the lower left corner to get started!</div>
-          </div>
-          <h2 class="text-muted mt-5">What is ProductDiv?</h2>
-          <p>
-            ProductDiv is a web page editor that works anywhere! It accomplishes
-            this by being an HTML and CSS first editor, running entirely client
-            side and based on configuration. It was born out of a frustration
-            with other visual editing tools either for their of
-            configurability, extensibility, or means of distribution. The core
-            of ProductDiv is an open source library found
-            <a href="https://github.com/awestbro/productdiv">here</a>. This
-            project pulls it in as a dependency (in <code>package.json</code>).
-          </p>
-          <p>
-            This project is
-            configured to work with the
-            <a
-              href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"
-              >Bootstrap 5 CSS framework</a
-            >. It provides utility classes and templates that work with
-            Bootstrap and the theme generated in this project.
-          </p>
-          <p>
-            ProductDiv, the library, works by rendering your templates in the page
-            itself. This way as your project grows, evolves, and changes so do
-            your templates. Since ProductDiv is configuration based, it lives beside your project as a tool for all the
-            developers on your team! Have a common component? Make a template
-            defintion and your team never has to write that code again!
-          </p>
-          <h2 class="text-muted mt-5">How do I use ProductDiv?</h2>
-          <p>
-            Start using ProductDiv by clicking the purple "PD" button in the
-            bottom left hand of your browser. This opens ProductDiv by wrapping
-            the current page in an <code>iframe</code> element so it can render
-            the editor. Now you should see ProductDiv on the left
-            hand side of the screen ready for use! If you see elements being
-            highlighted while you mouse over them don't panic! We'll get to that
-            in just a moment...
-          </p>
-          <h3 class="text-muted mt-5">Using the Template Selector</h3>
-          <div class="productdiv-drop-container"></div>
-          <p>
-            Now that you've opened ProductDiv, there should be a green box above this paragraph. Try dragging an alert template into it to see how page editing works! Many of the templates tagged with "Layout" contain these drop containers and are used as scaffolding for your application!
-          </p>
-          <p>
-            The Template selector should now be visible with all of your
-            templates. Try hover over the "eye" icon to see a template rendered
-            in your page! To put it into your page, click and drag any template
-            item over your page. When dragging a template onto the page, you'll
-            notice ProductDiv renders large rectangles around every element on
-            your page. This is to ensure your template can be placed anywhere on
-            the page because by default there are many hidden elements that
-            could normally not be selected by hovering over them. When trying to
-            place an element, the outer top and left corners around an element
-            are drop zones for prepending an element. Dropping a template over
-            the bottom and right edges of an element will append the template
-            after that element. If you drag a template over the element, you
-            will see green highlighted boxes on the left and right halves of the
-            element. This will do an inner prepend/ append. Once you know where
-            you're placing your element, just release the drag and watch it pop
-            into the page!
-          </p>
-          <p>
-            Templates are defined in the
-            <code>templates</code> section of your configuration for you to create,
-            modify, and extend to your liking. Some templates even include
-            containers to place other elements in them. Many of the "Layout"
-            components make use of this feature to make empty cards, containers,
-            rows, etc. for you to drag elements in as you see fit. These become
-            the building blocks of your application. To make your own container,
-            in any template add:
-            <code>
-              &lt;div class="productdiv-drop-container"&gt;&lt;/div&gt; </code
-            >. Try adding your own styles if you want to modify the
-            preview!
-          </p>
-          <h3 class="text-muted mt-5">Editing Elements</h3>
-          <p>
-            The Element Editor is opened by either clicking an element you want
-            to modify, or by dragging a template onto the page. Once it's open,
-            you can modify the HTML directly if you so choose, or apply utility
-            classes to the element using any of the defined classes. After
-            scrolling down, you can see active classes on the element, matched
-            classes based on configuration (i.e. if you click on an anchor, it
-            will show link and button helpers since they can be directly applied
-            to the element), and filtered classes if you so choose. Each utility
-            class is defined with "Tags" that can be easily filtered using the
-            "Filter by tag" and "Filter by name" inputs at the top of the
-            section. For instance if I wanted to modify an element's margin and
-            padding, I would select the "Spacing" tag from the tag filter and
-            make sure my element is placed exactly where I want it.
-          </p>
-          <p>
-            The Attribute Editor can be used by clicking the "Attributes" button
-            at the top of the Element Editor. This is used to modify any
-            attributes on the element, such as style and others. Attributes can
-            be added by clicking the "+" symbol next to the title.
-          </p>
-          <p>
-            Much of the functionality of the Element Editor is in the actions.
-            Under the HTML editor, you will see the available actions. An
-            important one is Select Parent. This selects the immediate parent
-            for this element and is useful for quickly navigating to elements
-            that may be hard to click exactly. If you need to get to a hard to
-            select parent element, just click its nearest child and "Select
-            Parent" until you're on the node you want to select. Other useful
-            editing actions are "Duplicate" and "Delete" which are
-            self-explanatory. The "Move" action lets you drag and drop the
-            element around the page like you are used to with the Template
-            Selector. The "Copy HTML" action copies the HTML of the element to
-            your clipboard. The "Copy As Template" button copies a javascript
-            template version of your component so you can easily add it to your
-            configuration and use the element from the Template Selector!
-          </p>
-          <h3 class="text-muted mt-5">Editor Actions</h3>
-
-          <div class="alert alert-warning" role="alert">
-            <h4 class="alert-heading">Usage with client side frameworks</h4>
             <p>
-              If you use a client-side rendering framework like React or Vue,
-              your page changes will be lost when you turn off ProductDiv. The toggle triggers a full document re-render. Please copy any changes
-              you would like to keep to you code before toggling this off.
-            </p>
-            <hr />
-            <p>
-              If you're using static or server-side HTML, you can toggle
-              ProductDiv on and off at will.
-            </p>
-          </div>
-
-          <p>
-            At the bottom of the ProductDiv editor, there's a small menu for
-            toggling ProductDiv off.
-          </p>
-          <p>
-            On the right-hand side of the menu you'll find actions. From here
-            you can copy the entire page's HTML, you can open documentation, and
-            you can toggle the Tree View. This will open a seperate menu on the
-            right hand side of the screen to help you navigate the nested
-            structure of the DOM. Clicking an element in the TreeView will open
-            it in the Element Editor.
-          </p>
-
-          <h2 class="text-muted mt-5">Making ProductDiv your own</h2>
-          <p>
-            ProductDiv is a foundation for your project that grows with you. It is configurable so you can add new templates and utility classes as needed! The configuration schema is here: 
-            <a
-              href="https://github.com/awestbro/productdiv/blob/main/app/utilities/configuration/configuration-importer.ts"
-              >https://github.com/awestbro/productdiv/blob/main/app/utilities/configuration/configuration-importer.ts</a
-            >.
-            The most basic configuration would look like:
-<pre>
-    <code>
-const configuration = {
-    treeViewIgnoreQuerySelectors: [ 
-        "script",
-        "style",
-        "link",
-        '[data-productdiv="true"]',
-        "svg",
-    ],
-    utilityClasses: [
-        {
-            name: "Margin Start",
-            type: "selectMany",
-            classes: [
-                "ms-(0|1|2|3|4|5|auto)",
-                `ms-(sm|md|lg|xl|xxl)-(0|1|2|3|4|5|auto)`,
-            ],
-            tags: ["Spacing", "Margin"],
-            selectors: [".test"],
-            documentationLink:
-                "https://getbootstrap.com/docs/5.0/utilities/spacing/#margin-and-padding",
-        }
-    ],
-    templates: [
-        {
-            name: "Section Container",
-            htmlTemplate: `
-                    &lt;section&gt;
-                        &lt;div class="container"&gt;
-                          &lt;div class="productdiv-drop-container"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/section&gt;
-                    `,
-            tags: ["Layout"],
-            previewWidth: string; // optional
-        }
-    ],
-}        
-    </code>
-</pre>
-          </p>
-
-          <p>
-              Above is a fully working configuration for ProductDiv. It's all templates and utility classes! Let's take a more in-depth look at the structure. Firstly <code>treeViewIgnoreQuerySelectors</code> will mostly be the same anywhere you use ProductDiv, but it can be used to exclude selectors of elements you don't want visible in the tree view (it can get very large with things like svgs). Under Utility classes is where things get interesting. 
-          </p>
-
-          <p>
-            <code>utilityClasses</code> are defined by:
-              <ul>
-                  <li><code>name</code>: Their pretty name in the Element Editor</li>
-                  <li><code>type</code>: The control to use when selecting. One of 'selectOne' or 'selectMany'</li>
-                  <li><code>classes</code>: Any class that can be applied via this control
-                    <ul>
-                        <li>
-                        the <code>(option|option2)</code> syntax is expanded by ProductDiv, so for example <code>me-(1|2)</code> will become two options: <code>me-1</code> and <code>me-2</code>.
-                        </li>
-                    </ul>
-                  <li><code>tags</code>: Tags help with searching, filtering, and categorizing in the filters section of the Element Editor</li>
-                  <li><code>documentationLink</code>: This is a link to a URL for documentation</li>
-                  <li><code>selectors</code>: A list of selectors this element will "match" when editing. This puts the control at the top of the list when editing making sure you always have the right editing controls in place for your element type.</li>
-                </li>
-            </ul>
-          </p>
-
-          <p>
-            <code>templates</code> are defined by:
-              <ul>
-                  <li><code>name</code>: Their pretty name in the Template Selector</li>
-                  <li><code>htmlTemplate</code>: The HTML you want on your page</li>
-                  <li><code>tags</code>: Tags help with searching, filtering, and categorizing in the filters section of the Template Selector</li>
-                  <li><code>previewWidth</code>: an optional setting for displaying previews. Default template previews are set to 100% width</li>
-              </ul>
-          </p>
-
-          <h2 class="text-center my-5">Now it's time to start building!</h2>
-
-          <div class="alert alert-success mt-5" role="alert">
-            <h4 class="alert-heading">Well done!</h4>
-            <p>
-              Now that you're an expert, it's time to start building your
-              application!
-            </p>
-            <hr />
-            <p class="mb-0">
-              If you run into any problems with ProductDiv, please submit an
-              issue at:
-              <a
-                href="https://github.com/awestbro/productdiv/issues"
-                target="_blank"
-                >https://github.com/awestbro/productdiv/issues</a
-              >.
+              This page has moved to
+              <a href="https://productdiv.com/docs">ProductDiv Docs</a>
             </p>
           </div>
         </div>
